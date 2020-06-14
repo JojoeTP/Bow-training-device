@@ -1,5 +1,5 @@
 int speakerPin = A0;
-int volume = 0;
+//int volume = 0;
 void setup () {
     pinMode (speakerPin, OUTPUT);
     //Serial.begin(9600);
