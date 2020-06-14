@@ -2,7 +2,7 @@ int speakerPin = A0;
 int volume = 0;
 void setup () {
     pinMode (speakerPin, OUTPUT);
-    Serial.begin(9600);
+    //Serial.begin(9600);
 }
 void loop () {
   /*for(volume; volume<255; volume++){
