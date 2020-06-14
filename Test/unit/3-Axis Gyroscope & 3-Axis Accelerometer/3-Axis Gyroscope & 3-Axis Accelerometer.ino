@@ -2,7 +2,7 @@
 #include <MPU6050.h>
 #include <Wire.h>
 MPU6050 mpu;
-int16_t ax, ay, az;
+int16_t ax, ay, az;  //int 16bit
 int16_t gx, gy, gz;
 int valx , valy , valz;
 //char rd;
