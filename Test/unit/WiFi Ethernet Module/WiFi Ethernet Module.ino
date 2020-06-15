@@ -8,12 +8,12 @@ char auth[] = "t_S8iNAWV6BNB6_K9_ybEKWRkls3xxR3";
 
 // Your WiFi credentials.
 // Set password to "" for open networks.
-char ssid[] = "Homechill";
-char pass[] = "Homechill117";
+char ssid[] = "Mi Phone";
+char pass[] = "0123456789";
 
 
 #include <SoftwareSerial.h>
-SoftwareSerial EspSerial(0, 1); // RX, TX
+SoftwareSerial EspSerial(2, 3); // RX, TX  ฟ้า--pin2is(Tx)++Rx  เทา--pin3is(Rx)++Tx   
 
 // Your ESP8266 baud rate:
 #define ESP8266_BAUD 9600
