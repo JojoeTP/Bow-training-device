@@ -1,26 +1,38 @@
-int ch_pd = 3;
+#define BLYNK_PRINT Serial
+#include <ESP8266_Lib.h>
+#include <BlynkSimpleShieldEsp8266.h>
 
-int io0 = 2;
+// You should get Auth Token in the Blynk App.
+// Go to the Project Settings (nut icon).
+char auth[] = "yourBlynkToken";
 
-void setup() {
+// Your WiFi credentials.
+// Set password to "" for open networks.
+char ssid[] = "yourSSID";
+char pass[] = "yourPassword";
 
-pinMode(ch_pd, OUTPUT);
 
-pinMode(io0, OUTPUT);
+#include <SoftwareSerial>
+SoftwareSerial EspSerial(2, 3); // RX, TX
 
-digitalWrite(io0,LOW);
+// Your ESP8266 baud rate:
+#define ESP8266_BAUD 9600
 
-digitalWrite(ch_pd,LOW);
+ESP8266 wifi(&EspSerial);
 
-delay(1000);
+void setup()
+{
+  // Debug console
+  Serial.begin(9600);
 
-digitalWrite(ch_pd, HIGH);
+  // Set ESP8266 baud rate
+  EspSerial.begin(ESP8266_BAUD);
+  delay(10);
 
+  Blynk.begin(auth, wifi, ssid, pass);
 }
 
 void loop()
-
 {
-
- 
-
+  Blynk.run();
+}
