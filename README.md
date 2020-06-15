@@ -31,10 +31,10 @@
 ### โครงสร้างพื้นฐาน
 ![diagram picture][diagram]
 
-[diagram]: https://https://github.com/jojoeza10/Bow-training-device/blob/master/image/diagram.jpg "Diagram"
+[diagram]: github.com/jojoeza10/Bow-training-device/blob/master/image/diagram.jpg "Diagram"
 
 ### ระบบการทำงาน 
 ![flowchart picture][flowchart]
 
-[flowchart]: https://https://github.com/jojoeza10/Bow-training-device/blob/master/image/Flowchart.jpg "flowchart"
+[flowchart]: github.com/jojoeza10/Bow-training-device/blob/master/image/Flowchart.jpg "flowchart"
 
