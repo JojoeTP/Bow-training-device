@@ -29,6 +29,12 @@
 - I2C 4 Digit 7-Segment Display
 
 ### โครงสร้างพื้นฐาน
+![diagram picture][diagram]
 
-### ระบบการทำงาน
+[diagram]: https://github.com/jojoeza10/Bow-training-device/blob/master/image/diagram.jpg "Diagram"
+
+### ระบบการทำงาน 
+![flowchart picture][flowchart]
+
+[flowchart]: https://github.com/jojoeza10/Bow-training-device/blob/master/image/Flowchart.jpg "flowchart"
 
