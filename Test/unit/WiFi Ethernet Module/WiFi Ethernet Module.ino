@@ -2,7 +2,7 @@
 #include <ESP8266_Lib.h>
 #include <BlynkSimpleShieldEsp8266.h>
 
-char auth[] = "z8JkTw_tZJO0rDq6rFmUAkQn8WpS4z0-";
+char auth[] = "t_S8iNAWV6BNB6_K9_ybEKWRkls3xxR3";
 
 char ssid[] = "Homechill";
 char pass[] = "Homechill117";
@@ -26,5 +26,11 @@ void setup() {
   Terminal.clear();
   Terminal.println("Wifi Connected");
   Terminal.flush();
+}
+
+
+
+void loop() {
+  Blynk.run();
 }
 
