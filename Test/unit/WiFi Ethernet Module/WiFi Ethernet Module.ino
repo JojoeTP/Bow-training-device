@@ -15,6 +15,10 @@ ESP8266 wifi(&EspSerial);
 
 WidgetTerminal Terminal(V0);
 
+BlynkTimer timer;
+
+int degree;
+
 void setup() {
   Serial.begin(9600);
 
@@ -31,6 +35,8 @@ void setup() {
 
 
 void loop() {
+    degree = random(1,90);
   Blynk.run();
+  Blynk.virtualWrite(V1, degree);
 }
 
