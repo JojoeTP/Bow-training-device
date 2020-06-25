@@ -10,7 +10,7 @@ char pass[] = "Homechill117";
 #include <SoftwareSerial.h>
 SoftwareSerial EspSerial(3, 2); // RX, TX
 
-#define ESP8266_BAUD 38400
+#define ESP8266_BAUD 9600
 ESP8266 wifi(&EspSerial);
 
 WidgetTerminal Terminal(V0);
@@ -20,7 +20,7 @@ BlynkTimer timer;
 int degree;
 
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(300);
 
   EspSerial.begin(ESP8266_BAUD);
   delay(10);
@@ -30,13 +30,18 @@ void setup() {
   Terminal.clear();
   Terminal.println("Wifi Connected");
   Terminal.flush();
+
+  
 }
 
 
 
 void loop() {
     degree = random(1,90);
+    delay(1000);
+    
   Blynk.run();
   Blynk.virtualWrite(V1, degree);
+
 }
 

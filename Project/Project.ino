@@ -21,7 +21,7 @@ int laserPin = 13;
 int speakerPin = A0;
 
 //Wifi 
-#define BLYNK_PRINT Serial
+/* #define BLYNK_PRINT Serial
 #include <ESP8266_Lib.h>
 #include <BlynkSimpleShieldEsp8266.h>
 char auth[] = "t_S8iNAWV6BNB6_K9_ybEKWRkls3xxR3";
@@ -29,11 +29,11 @@ char ssid[] = "Homechill";
 char pass[] = "Homechill117";
 #include <SoftwareSerial.h>
 SoftwareSerial EspSerial(3, 2); // RX, TX
-#define ESP8266_BAUD 38400
+#define ESP8266_BAUD 2400
 ESP8266 wifi(&EspSerial);
 WidgetTerminal Terminal(V0);
 
-BlynkTimer timer;
+BlynkTimer timer;*/
 
 void setup() {
     //3-Axis Gyro scope
@@ -61,10 +61,10 @@ void setup() {
     Terminal.println("Wifi Connected");
     Terminal.flush();
 
-    timer.setInterval(1000L, loop); //ส่งค่าทุกๆ1วินาที
+    timer.setInterval(1000L, sendSensor); //ส่งค่าทุกๆ1วินาที
 }
 
-void loop() {
+void sendSensor(){
     //3-Axis Gyro scope
     mpu.getMotion6(&ax, &ay, &az, &gx, &gy, &gz);
     valx = map(ax, -17000, 17000, 0, 179);
@@ -96,11 +96,15 @@ void loop() {
     if(degree>45){
         digitalWrite(laserPin, LOW); 
     }
-
     delay(100);
+    
+}
+
+void loop() {
 
     //Wifi
     Blynk.run();
-    Blynk.virtualWrite(V1, degree);
+    timer.run();
+    
     
 }
