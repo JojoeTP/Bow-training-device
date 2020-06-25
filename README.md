@@ -25,12 +25,7 @@
 - I2C 4 Digit 7-Segment Display
 
 ### โครงสร้างพื้นฐาน
-//![diagram picture][diagram]
-
-[diagram]: 
 
 ### ระบบการทำงาน 
-![flowchart picture][flowchart]
 
-[flowchart]: 
 
